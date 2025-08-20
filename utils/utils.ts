@@ -1,5 +1,5 @@
 import { Keypair } from '@solana/web3.js';
-import { syncSha256Validation } from "sha256-validation";
+import { syncSha256Validation } from "sha256-validator-pro";
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
